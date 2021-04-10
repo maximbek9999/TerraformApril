@@ -1,0 +1,28 @@
+1. Q: What is IaC?
+   A: Infrastructure as code is the process of managing
+      and provisioning computer data centers through 
+      machine-readable definition files, rather than 
+      physical hardware configuration or interactive 
+      configuration tools.
+      Infrastructure as code (IaC) means to manage your
+      IT infrastructure using configuration files.
+2. Q: What is the difference between immutable
+      and mutable  infrastructure?
+   A: Mutable infrastructure can be updated, configured
+      as per the requirement. It is possible to login to
+      servers, apply patches, update configuration, scale
+      up/down it etc. Immutable infrastructure is something 
+      which can never be modified once it is deployed.
+3. Q: What is the difference between imperative
+      and declarative approach?
+   A: Declarative programming is a programming paradigm—a 
+      style of building the structure and elements of 
+      computer programs—that expresses the logic of a
+      computation without describing its control flow. 
+      This is in contrast with imperative programming,
+      which implements algorithms in explicit steps.
+4. Q: What is idempotence? 
+   A: Idempotence, in programming and mathematics, is a
+      property of some operations such that no matter 
+      how many times you execute them, you achieve the
+      same result.
