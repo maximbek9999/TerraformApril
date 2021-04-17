@@ -1,0 +1,8 @@
+env           = "qa"
+instance_type = "t2.micro"
+ingress_ssh_port = "22"
+ingress_http_port = "80"
+sg_cidr_blocks = "0.0.0.0/0"
+ingress_protocol_type = "tcp"
+egress_protocol_type = "-1"
+egress_port = "0"
