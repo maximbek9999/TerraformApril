@@ -6,6 +6,7 @@ resource "aws_instance" "ec2_with_sg" {
   user_data              = data.template_file.user_data.rendered #data spurce with function 
 
   tags = {
-    Name = var.env
+    Name = "${var.env}-Instance"
+    Name2 = format("Instance-%s", var.env) #
   }
 }
