@@ -4,6 +4,7 @@ resource "aws_launch_configuration" "webserver_lc" {
   instance_type   = var.instance_type
   user_data       = data.template_file.webserver.rendered
   security_groups = [aws_security_group.webserver_sg.id]
+
 }
 
 resource "aws_security_group" "webserver_sg" {

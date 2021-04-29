@@ -6,14 +6,6 @@ data "aws_subnet_ids" "default" {
   vpc_id = data.aws_vpc.default.id
 }
 
-data "aws_subnet" "subnet_values" {
-  for_each = data.aws_subnet_ids.default.ids
-  id       = each.value
-}
-output "subnets_ids" {
-  value = [for s in data.aws_subnet.subnet_values: s.id]
-}
-
 data "aws_ami" "amazon_linux2" {
   most_recent = true
   owners      = ["amazon"]

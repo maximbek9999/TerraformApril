@@ -10,6 +10,8 @@ variable "instance_type" {
 }
 
 variable "asg_name" {
-  type = string
+  type    = string
   default = "asg"
 }
+
+
