@@ -19,7 +19,7 @@ output "rds_password" {
   value = data.terraform_remote_state.password.outputs.rds_password
 }
 
-output "rds_sg" {
-    value = data.terraform_remote_state.rds_sg.outputs.rds_sg
+output "rds_sg_id" {
+    value = data.terraform_remote_state.rds_sg.outputs.rds_sg_id
 }
 
