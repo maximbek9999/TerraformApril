@@ -27,3 +27,30 @@ data "template_file" "webserver" {
     env = var.env
   }
 }
+
+data "terraform_remote_state" "rds" {
+  backend = "s3"
+  config = {
+    bucket = "terraformmax"
+    key    = "${var.env}/backend.tfstate"
+    region = "us-east-1" 
+  }
+}
+
+data "terraform_remote_state" "password" {
+  backend = "s3"
+  config = {
+    bucket = "terraformmax"
+    key    = "${var.env}/backend.tfstate"
+    region = "us-east-1" 
+  }
+}
+
+data "terraform_remote_state" "rds_sg" {
+  backend = "s3"
+  config = {
+    bucket = "terraformmax"
+    key    = "${var.env}/backend.tfstate"
+    region = "us-east-1" 
+  }
+}
