@@ -16,12 +16,20 @@ resource "aws_db_instance" "rds" {
   }
   resource "null_resource" "tables" {
     provisioner "local-exec" {
-      command = <<EOF
+            command = <<EOF
       mysql -h "${aws_db_instance.rds.address}" -u "${aws_db_instance.rds.username}" < "db.sql"
       EOF
     environment = {
       MYSQL_PWD = random_password.password.result
     }
     
+    }
+  }
+
+  resource "null_resource" "mysql_instalaltion" {
+    provisioner "local-exec" {
+            command = <<EOF
+            sudo yum install mysql
+            EOF
     }
   }
