@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "main_bucket" {
   tags = local.tags
 }
 
-resource "aws_s3_bucket_public_access_block" "example" {
+resource "aws_s3_bucket_public_access_block" "bucket_policy" {
   bucket = aws_s3_bucket.main_bucket.id
 
   block_public_acls   = true
