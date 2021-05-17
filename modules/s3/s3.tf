@@ -15,5 +15,5 @@ resource "aws_s3_bucket_public_access_block" "bucket_policy" {
 }
 
 output "s3_name" {
-  value = aws_s3_bucket.main_bucket.bucket_name
+  value = aws_s3_bucket.main_bucket.id
 }
